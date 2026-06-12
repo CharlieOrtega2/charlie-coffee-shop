@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thhe Hunt Coffee Shop</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>☕ Charlie's Coffee Shop</h1>
+    <p>Fresh Brews. Ocean Views.</p>
+  </header>
+
+  <section class="menu">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop">
+
+      <h2>Vanilla Latte</h2>
+
+      <p>$5.50</p>
+
+      <select class="size">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+
+      <select class="milk">
+        <option>Whole Milk</option>
+        <option>Oat Milk</option>
+        <option>Almond Milk</option>
+      </select>
+
+      <button onclick="addToCart('Vanilla Latte', 5.50, this)">
+        Add To Cart
+      </button>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1494314671902-399b18174975?q=80&w=1200&auto=format&fit=crop">
+
+      <h2>Cappuccino</h2>
+
+      <p>$4.75</p>
+
+      <select class="size">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+
+      <select class="milk">
+        <option>Whole Milk</option>
+        <option>Oat Milk</option>
+        <option>Soy Milk</option>
+      </select>
+
+      <button onclick="addToCart('Cappuccino', 4.75, this)">
+        Add To Cart
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="cart">
+
+    <h2>Your Order</h2>
+
+    <div id="cartItems"></div>
+
+    <h3>Total: $<span id="total">0.00</span></h3>
+
+    <button class="checkout" onclick="checkout()">
+      Checkout
+    </button>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <div class="rain"></div>
+
+  <div class="overlay">
+    <header>
+    <h1></h1>Where Every Sunrise Starts With Coffee...</h1>
+    <p> Place Your Order Today!</p>
+    <header>
+
+    <button>
+      Order Now
+    </button>
+  </div>
+
+</section>
+<!-- ADD THIS INSIDE YOUR index.html -->
+
+<link rel="stylesheet" href="style.css">
+<div class="steam"></div>
+<div id="cartPanel" class="cart-panel">
+  <h2>Your Order ☕</h2>
+  <div id="cartItems"></div>
+  <h3>Total: $<span id="total">0.00</span></h3>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+<button class="open-cart" onclick="toggleCart()">🛒</button>
+<div id="orderScreen" class="order-screen">
+  <h1>☕ Brewing your coffee...</h1>
+</div>
